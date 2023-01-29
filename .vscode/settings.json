@@ -1,0 +1,16 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "~/../css"
+        }
+    ],
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.autoprefix": [
+        ">1%",
+        "last 2 versions"
+    ],
+    "livePreview.defaultPreviewPath": "c:\\Users\\Monika\\Desktop\\it\\projekt\\goit-markup-hw-08\\portfolio.html",
+
+}

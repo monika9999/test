@@ -1,0 +1,82 @@
+.team {
+  @extend .section;
+  @extend .container;
+  text-align: center;
+  background-color: #f5f4fa;
+  padding: 60px 0;
+  margin-bottom: 0px;
+
+  &__list {
+    @extend .container;
+    @extend .list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__item {
+    background-color: $secondaryColorWhite;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    width: 100%;
+  }
+
+  &__photo {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $tertiaryColorGrey;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    padding-top: 30px;
+  }
+
+  &__icon {
+    fill: $tertiaryColorLight;
+    border-radius: 50%;
+    transition-property: fill, background-color, border-radius;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  }
+
+  &__icon:hover,
+  &__icon:focus,
+  &__icon:active {
+    fill: $secondaryColorWhite;
+    background-color: $primaryColor;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: $breakpointTabletStart) and (max-width: $breakpointTabletEnd) {
+  .team__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .team {
+    padding: 94px 0;
+  }
+
+  .team__list {
+    flex-wrap: nowrap;
+  }
+
+  .team__text {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,36 @@
+/*
+ * Główny plik dla stylów.
+ * Wszystkie partials podłączamy tutaj.
+ */
+
+// Style dla pliku z przykładem HTML fragmentu
+
+@import './partials/global';
+@import './partials/typography';
+@import './partials/heroheader';
+@import './partials/products';
+@import './partials/about';
+@import './partials/advantages';
+@import './partials/gallery';
+@import './partials/customerreviews';
+@import './partials/contacts';
+@import './partials/footer';
+@import './partials/button';
+
+.title {
+  font-family: $optional-font;
+  font-size: 2.12rem;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: $optional-font;
+  font-size: 1.25rem;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

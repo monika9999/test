@@ -1,0 +1,102 @@
+.submenu {
+  margin: auto;
+  width: 580px;
+  padding: 94px 0 50px 0;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @extend .list;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+}
+
+.projects {
+  &__list {
+    @extend .container;
+    @extend .list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    transition-property: box-shadow;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+    width: 100%;
+  }
+
+  &__item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &__photo {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    align-items: center;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: ease;
+  }
+
+  &__item:hover &__overlay {
+    transform: translateY(0);
+  }
+
+  &__text {
+    color: $secondaryColorWhite;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 24px;
+  }
+
+  &__description {
+    border: 1px solid #eee;
+    border-top: none;
+    padding: 20px 24px;
+  }
+
+  &__title {
+    line-height: 2;
+  }
+
+  &__specification {
+    color: $tertiaryColorGrey;
+    line-height: 2;
+  }
+}
+
+@media screen and (min-width: $breakpointTabletStart) and (max-width: $breakpointTabletEnd) {
+  .projects__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .projects__item {
+    flex-basis: calc((100% - 30px) / 3.1);
+  }
+}

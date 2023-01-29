@@ -1,0 +1,60 @@
+.article {
+  padding: 60px 15px;
+  @extend .section;
+  @extend .container;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    @extend .list;
+  }
+
+  &__box {
+    background-color: #f5f4fa;
+    border-radius: $borderRadiusDefault;
+    padding: 25px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $tertiaryColorGrey;
+  }
+}
+
+@media screen and (min-width: $breakpointTabletStart) and (max-width: $breakpointTabletEnd) {
+  .article__title {
+    text-align: left;
+  }
+
+  .article__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .article {
+    padding: 94px 0;
+  }
+
+  .article__list {
+    flex-wrap: nowrap;
+  }
+
+  .article__title {
+    text-align: left;
+  }
+}

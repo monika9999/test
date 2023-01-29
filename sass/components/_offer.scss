@@ -1,0 +1,38 @@
+.offer {
+  display: none;
+  text-align: center;
+  @extend .section;
+  @extend .container;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    @extend .list;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item > &__image {
+    display: block;
+  }
+
+  &__description {
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $secondaryColorWhite;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 27px 0;
+    width: 370px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .offer {
+    display: block;
+  }
+}
